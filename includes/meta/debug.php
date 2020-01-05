@@ -40,7 +40,7 @@
  **/
 function development_exception_handler($e)
 {
-    pprint_r($e);
+    print_r($e);
     die();
 } // end development_exception_handler
 
