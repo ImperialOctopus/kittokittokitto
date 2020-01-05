@@ -80,7 +80,7 @@ switch($_SERVER['RELEASE_MODE'])
              * The administator's e-mail address. Password recovery notices
              * come from this address, too!
              **/
-            'administrator_email' => 'owlmanatt@gmail.com',
+            'administrator_email' => 'imperialoctopus@gmail.com',
             
             /**
              * The absolute path (on the filesystem) to your app. On UNIX,
@@ -88,34 +88,34 @@ switch($_SERVER['RELEASE_MODE'])
              *
              * Consult your system_check.php file for this path. 
              **/
-			'base_path' => '/var/www/kitto',
+			'base_path' => 'C:/Users/Zoey/git/kittokittokitto',
             
             /**
              * The path to the root of your Smarty template directory.
              * The templates/, templates_c/, cache/, and configs/ folders
              * live in here.
              **/
-			'template_path' => '/var/www/kitto/template',
+			'template_path' => 'C:/Users/Zoey/git/kittokittokitto/template',
 
             /**
              * The HTMLPurifier cache must be writable by the webserver's user.
              * Set this to null to disable the cache (but you *want* the cache
              * for performance reasons!). Oh, and no trailing slash.
              **/
-            'htmlpurifier_cachedir' => '/var/www/kitto/cache',
+            'htmlpurifier_cachedir' => 'C:/Users/Zoey/git/kittokittokitto/cache',
 
             /*
              * The full URL (no trailing slash) to your site.
              * ie, 'http://demo.kittokittokitto.yasashiisyndicate.org'
              **/
-			'public_dir' => 'http://bell.owl.ys/kitto',
+			'public_dir' => 'http://localhost/',
             
             /**
              * If you have many sites at this domain, a cookie prefix
              * is good to ensure there's no overlap between your various
              * apps' cookies.
              **/
-			'cookie_prefix' => 'kkk_',
+			'cookie_prefix' => '',
 
             /**
              * The name of your site.
@@ -126,7 +126,7 @@ switch($_SERVER['RELEASE_MODE'])
              * The name of your site's currency.
              **/
             'currency_name_singular' => 'Gold',
-            'currency_name_plural' => 'Golds',
+            'currency_name_plural' => 'Gold',
 
             /**
              * How much money should the user start out with?
