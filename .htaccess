@@ -2,7 +2,7 @@
 # SetEnv RELEASE_MODE DEV
 
 RewriteEngine On
-RewriteBase /kitto
+RewriteBase /
 
 # These are the real folders.
 RewriteRule ^resources/(.*)$ resources/$1 [L]
