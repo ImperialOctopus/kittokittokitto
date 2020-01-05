@@ -69,7 +69,7 @@ switch($_SERVER['RELEASE_MODE'])
              * @var array
              **/
 			'db_dsn' => array(
-				'phptype' => 'mysql', // MySQL = mysql, Oracle = oci, Postgres = pgsql.
+				'phptype' => 'mysqli', // MySQL = mysql, Oracle = oci, Postgres = pgsql.
 				'username' => 'kitto',
 				'password' => 'k1tt0',
 				'hostspec' => 'localhost',
@@ -173,17 +173,15 @@ switch($_SERVER['RELEASE_MODE'])
 
 } // end release mode switch
 
-// PEAR::DB gets very angry when it cannot include files in external_libs/DB/.
-ini_set('include_path',ini_get('include_path').':./external_lib/');
-
 /**
  * These are mission-critical libraries. Nothing else will function 
  * correctly without these. APHP needs to come before any other classes,
  * otherwise they will cause a fatal error because their parent class is
  * undefined.
  **/
-require_once('external_lib/DB.php');
-require_once('external_lib/Log.php');
+//phpinfo();
+require_once('DB.php');
+require_once('Log.php');
 require_once('external_lib/aphp/aphp.php');
 
 /**
@@ -200,9 +198,10 @@ $DB_OPTIONS = array(
 	'portability' => DB_PORTABILITY_ALL,
 );
 
-$db = DB::connect($APP_CONFIG['db_dsn'],$DB_OPTIONS);
+$db = (new DB)->connect($APP_CONFIG['db_dsn'],$DB_OPTIONS);
 if (PEAR::isError($db)) 
 {
+    echo($db);
     die("An error occured when attempting to connect to the database. Oops!");
 }
 $db->setFetchMode(DB_FETCHMODE_ASSOC);

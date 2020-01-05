@@ -48,7 +48,7 @@ class English_Inflector
 
         if(!isset($instance[0]) || !$instance[0]) 
         {
-            $instance[0] =& new English_Inflector();
+            $instance[0] = new English_Inflector();
         }
 
         return $instance[0];

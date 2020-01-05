@@ -49,7 +49,7 @@ class PetSpecieColor extends ActiveTable
      * 
      * @return bool 
      **/
-    public function destroy()
+    public function destroy($id=null)
     {
         $result = $this->db->query('DELETE FROM pet_specie_pet_specie_color WHERE pet_specie_color_id = ?',array($this->getPetSpecieColor()));
         

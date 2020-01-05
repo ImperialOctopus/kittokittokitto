@@ -65,7 +65,7 @@ class BoardPost extends ActiveTable
      * @param array $POST 
      * @return bool 
      **/
-    public function create($POST)
+    public function create($POST=[])
     {
         $result = parent::create($POST);
         
@@ -92,7 +92,7 @@ class BoardPost extends ActiveTable
      * @ihatemysql
      * @return bool 
      **/
-    public function destroy()
+    public function destroy($id=null)
     {
         $result = $this->db->query('UPDATE user SET post_count = post_count - 1 WHERE user_id = ?',array($this->getUserId())); 
         

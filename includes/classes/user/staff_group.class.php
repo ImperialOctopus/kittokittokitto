@@ -184,7 +184,7 @@ class StaffGroup extends ActiveTable
      * 
      * @return bool
      **/
-    public function destroy()
+    public function destroy($id=null)
     {
         $result = $this->db->query('DELETE FROM staff_group_staff_permission WHERE staff_group_id = ?',array($this->getStaffGroupId()));
 

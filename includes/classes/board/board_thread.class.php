@@ -112,7 +112,7 @@ class BoardThread extends ActiveTable
      * 
      * @return bool 
      **/
-    public function destroy()
+    public function destroy($id=null)
     {
         $posts = $this->grabPosts();
         foreach($posts as $post)
