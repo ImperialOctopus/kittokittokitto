@@ -111,7 +111,6 @@ function draw_errors($ERRORS)
  **/
 function stripinput($text) 
 {
-    if(get_magic_quotes_gpc() == 1) { stripslashes($text); }
 	$search = array("\"", "'", "\\", '\"', "\'", "<", ">", "&nbsp;");
 	$replace = array("&quot;", "&#39;", "&#92;", "&quot;", "&#39;", "&lt;", "&gt;", " ");
 	$text = str_replace($search, $replace, $text);

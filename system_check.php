@@ -39,7 +39,7 @@ $version_compatible = version_compare('5.0.0',$php_version,'<=');
 // Required modules.
 $MODULES = array(
     'GD' => extension_loaded('gd'),
-    'MySQL' => extension_loaded('mysql'),
+    'MySQLi' => extension_loaded('mysqli'),
     'PCRE' => extension_loaded('pcre'),
     'Sessions' => extension_loaded('session'),
 );

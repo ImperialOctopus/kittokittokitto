@@ -74,7 +74,7 @@ foreach(Cronjob::listPendingJobs($db) as $job)
 // Display page.
 if(is_a($jump_page,'JumpPage') == false)
 {
-	header("HTTP/1.1 404 Not Found");
+    header("HTTP/1.1 404 Not Found");
     $renderer->display('http/404.tpl');
 
     die();
@@ -90,7 +90,7 @@ else
 	$renderer->assign('fat','fade-EEAA88');
 	
 	$renderer->assign('page_title',$jump_page->getPageTitle());
-	$renderer->assign('page_html_title',$jump_page->getPageHtmlTitle());
+    $renderer->assign('page_html_title',$jump_page->getPageHtmlTitle());
     
     if($jump_page->getIncludeTinymce() == 'Y')
     {
@@ -157,7 +157,8 @@ else
     
     if($jump_page->getShowLayout() == 'Y')
     {
-    $renderer->display("layout/{$jump_page->getLayoutType()}/header.tpl");
+        
+        $renderer->display("layout/{$jump_page->getLayoutType()}/header.tpl");
     }
 
 	if($jump_page->hasAccess($User) == false)
